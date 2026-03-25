@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio personal de Leandro Canela con una selección de proyectos web." />
+  <title>Leandro Canela</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-copy">
+        <h1>Leandro Canela</h1>
+        <p class="hero-subtitle">
+          Desarrollo web sencillo, claro y funcional.
+        </p>
+        <p>
+          Soy estudiante de desarrollo web y me interesa construir productos
+          limpios, fáciles de usar y bien resueltos. Trabajo sobre todo con
+          HTML, CSS, JavaScript, PHP y Laravel.
+        </p>
+      </div>
+
+      <div class="hero-links">
+        <p><a href="#proyectos">Proyectos</a></p>
+        <p>
+          <a href="https://gitlab.com/leandrocanela279" target="_blank" rel="noreferrer">GitLab</a>
+        </p>
+        <p>
+          <a href="https://github.com/Leocanela279" target="_blank" rel="noreferrer">GitHub</a>
+        </p>
+        <p>
+          <a href="https://porfoli-leo.vercel.app/cvLeo.pdf" target="_blank" rel="noreferrer">Currículum</a>
+        </p>
+        <p>
+          <a href="mailto:leandrocanela279@gmail.com">leandrocanela279@gmail.com</a>
+        </p>
+      </div>
+    </header>
+
+    <hr />
+
+    <main>
+      <section class="section" id="sobre" aria-labelledby="sobre-titulo">
+        <h2 id="sobre-titulo" class="section-title">sobre</h2>
+        <p>
+          Actualmente sigo aprendiendo a través de proyectos personales y
+          académicos. Me atrae especialmente la parte visual del frontend,
+          pero también disfruto construyendo lógica de negocio y paneles de
+          gestión en backend.
+        </p>
+        <p>
+          Este portfolio está hecho en HTML, CSS y JavaScript puro, con una
+          estética muy contenida para que el contenido tenga todo el peso.
+        </p>
+      </section>
+
+      <section class="section" id="proyectos" aria-labelledby="proyectos-titulo">
+        <h2 id="proyectos-titulo" class="section-title">proyectos</h2>
+
+        <article class="timeline-entry">
+          <div class="timeline-time">2025</div>
+          <div class="timeline-rail">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <a class="timeline-thumb" href="https://leo-deploy-pages-883021.gitlab.io/ejercicio-noticias/index.html"
+              target="_blank" rel="noreferrer" aria-label="Abrir proyecto de landing page de noticias">
+              <img src="assets/project1-small.png" alt="Captura de la landing page estática de noticias" width="420"
+                height="275" loading="lazy" />
+            </a>
+          </div>
+          <div class="timeline-body">
+            <h3>Landing page estática de noticias</h3>
+            <p>
+              Una página centrada en maquetación y composición visual con
+              HTML y CSS. La captura del repo muestra una versión con estética
+              oscura y tarjetas de contenido.
+            </p>
+            <p>
+              <a href="https://leo-deploy-pages-883021.gitlab.io/ejercicio-noticias/index.html" target="_blank"
+                rel="noreferrer">Ver proyecto</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline-entry">
+          <div class="timeline-time">2025</div>
+          <div class="timeline-rail">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-thumb">
+              <img src="assets/project2-small.png" alt="Captura del sistema de gestión de ligas escolares" width="600"
+                height="200" loading="lazy" />
+            </div>
+          </div>
+          <div class="timeline-body">
+            <h3>Sistema de gestión de ligas escolares</h3>
+            <p>
+              Aplicación para gestionar equipos, ligas y partidos en un
+              entorno escolar. La miniatura muestra el panel de gestión de
+              equipos con acciones de edición y consulta.
+            </p>
+            <p>Proyecto privado o no publicado actualmente.</p>
+          </div>
+        </article>
+
+        <article class="timeline-entry">
+          <div class="timeline-time">2026</div>
+          <div class="timeline-rail">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <a class="timeline-thumb" href="https://leo-dev.es/login" target="_blank" rel="noreferrer"
+              aria-label="Abrir SaaS de gestión de restaurantes">
+              <img src="assets/project3-small.png" alt="Captura del SaaS de gestión de restaurantes" width="420"
+                height="243" loading="lazy" />
+            </a>
+          </div>
+          <div class="timeline-body">
+            <h3>SaaS de gestión de restaurantes</h3>
+            <p>
+              Plataforma multi-tenant hecha con Laravel para la gestión de
+              restaurantes. La imagen corresponde a la pantalla de acceso del
+              producto.
+            </p>
+            <p>
+              <a href="https://leo-dev.es/login" target="_blank" rel="noreferrer">Ver proyecto</a>
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section class="section" aria-labelledby="stack-titulo">
+        <h2 id="stack-titulo" class="section-title">stack</h2>
+        <p>HTML, CSS, JavaScript, PHP, Laravel, MySQL, Vue y Astro.</p>
+      </section>
+
+      <section class="section" id="contacto" aria-labelledby="contacto-titulo">
+        <h2 id="contacto-titulo" class="section-title">contacto</h2>
+        <p>
+          Puedes escribirme a
+          <a href="mailto:leandrocanela279@gmail.com">leandrocanela279@gmail.com</a>
+          <button class="copy-button" type="button" data-copy-email>
+            copiar
+          </button>
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p><span data-year></span> Leandro Canela.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
