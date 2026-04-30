@@ -4,176 +4,267 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio personal de Leandro Canela con una selección de proyectos web." />
-  <title>Leandro Canela</title>
+  <meta name="description"
+    content="Portfolio de Leandro Canela con una interfaz inspirada en terminal, centrada en backend, producto y proyectos personales." />
+  <title>Leandro Canela | Terminal Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <div class="page">
-    <header class="hero">
-      <div class="hero-copy">
-        <h1>Leandro Canela</h1>
-        <p class="hero-subtitle">
-          Desarrollo web sencillo, claro y funcional.
-        </p>
-        <p>
-          Soy estudiante de desarrollo web y me interesa construir productos
-          limpios, fáciles de usar y bien resueltos.Me inclino mas hacia el backend , sobretodo me gustan los proyectos
-          retadores y bajo nivel.
-        </p>
+  <div class="page-shell">
+    <div class="ambient-grid" aria-hidden="true"></div>
+
+    <header class="window-frame">
+      <div class="window-bar">
+        <div class="window-actions" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <p class="window-title">leandro@portfolio: ~/workspace/terminal-ui</p>
+        <div class="window-status">
+          <span>online</span>
+        </div>
       </div>
 
-      <div class="hero-links">
-        <p><a href="#proyectos">Proyectos</a></p>
-        <p>
-          <a href="https://gitlab.com/leandrocanela279" target="_blank" rel="noreferrer">GitLab</a>
-        </p>
-        <p>
-          <a href="https://github.com/Leocanela279" target="_blank" rel="noreferrer">GitHub</a>
-        </p>
-        <p>
-          <a href="https://porfoli-leo.vercel.app/cvLeo.pdf" target="_blank" rel="noreferrer">Currículum</a>
-        </p>
-        <p>
-          <a href="mailto:leandrocanela279@gmail.com">leandrocanela279@gmail.com</a>
-        </p>
+      <div class="layout">
+        <aside class="sidebar">
+          <div class="sidebar-section">
+            <p class="sidebar-label">session</p>
+            <h1>Leandro Canela</h1>
+            <p class="sidebar-copy">
+              Backend-minded web developer. Me gusta construir producto,
+              automatizar procesos y pelearme un poco con problemas de bajo
+              nivel.
+            </p>
+          </div>
+
+          <nav class="sidebar-section" aria-label="Navegacion principal">
+            <p class="sidebar-label">jump</p>
+            <button class="nav-link is-active" type="button" data-target="overview">overview</button>
+            <button class="nav-link" type="button" data-target="projects">projects</button>
+            <button class="nav-link" type="button" data-target="stack">stack</button>
+            <button class="nav-link" type="button" data-target="contact">contact</button>
+          </nav>
+
+          <div class="sidebar-section">
+            <p class="sidebar-label">links</p>
+            <a href="https://github.com/Leocanela279" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://gitlab.com/leandrocanela279" target="_blank" rel="noreferrer">GitLab</a>
+            <a href="https://porfoli-leo.vercel.app/cvLeo.pdf" target="_blank" rel="noreferrer">Resume</a>
+          </div>
+
+          <div class="sidebar-section sidebar-footnote">
+            <p class="sidebar-label">status</p>
+            <p>Available for internships, freelance and interesting builds.</p>
+          </div>
+        </aside>
+
+        <main class="terminal">
+          <section class="hero-panel panel" id="overview" data-panel>
+            <div class="panel-header">
+              <span class="panel-title">boot.log</span>
+              <span class="panel-meta">interactive profile</span>
+            </div>
+
+            <div class="intro-grid">
+              <div class="intro-copy">
+                <p class="line-prefix">$ whoami</p>
+                <h2>
+                  Desarrollo interfaces limpias y sistemas con criterio,
+                  con bastante carino por el backend.
+                </h2>
+                <p class="lead">
+                  Ahora mismo estoy aprendiendo a traves de proyectos reales:
+                  paneles de gestion, productos SaaS y apps de escritorio.
+                  Me atrae la claridad de una buena UX, pero donde mas
+                  disfruto es en la logica de negocio y la arquitectura.
+                </p>
+              </div>
+
+              <div class="hero-stats">
+                <div class="stat-card">
+                  <span class="stat-key">focus</span>
+                  <strong>backend + product</strong>
+                </div>
+                <div class="stat-card">
+                  <span class="stat-key">base</span>
+                  <strong>Madrid / remote</strong>
+                </div>
+                <div class="stat-card">
+                  <span class="stat-key">current build</span>
+                  <strong>restaurant SaaS</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="command-panel">
+              <div class="command-output" aria-live="polite">
+                <p><span class="prompt">visitor@portfolio</span>:~$ help</p>
+                <p class="response" data-command-output>
+                  Usa los accesos o escribe un comando para explorar el perfil.
+                </p>
+              </div>
+
+              <form class="command-form" data-command-form>
+                <label class="sr-only" for="command-input">Comando</label>
+                <span class="prompt">visitor@portfolio</span>
+                <input id="command-input" name="command" type="text" autocomplete="off"
+                  placeholder="help, projects, stack, contact, resume" />
+                <button type="submit">run</button>
+              </form>
+
+              <div class="command-shortcuts">
+                <button type="button" data-command="overview">overview</button>
+                <button type="button" data-command="projects">projects</button>
+                <button type="button" data-command="stack">stack</button>
+                <button type="button" data-command="contact">contact</button>
+                <button type="button" data-command="resume">resume</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel section-panel" id="projects" data-panel>
+            <div class="panel-header">
+              <span class="panel-title">projects.index</span>
+              <span class="panel-meta">selected work</span>
+            </div>
+
+            <div class="project-list">
+              <article class="project-card">
+                <div class="project-shot">
+                  <img src="assets/project1-small.png" alt="Captura de la landing page de noticias" loading="lazy" />
+                </div>
+                <div class="project-body">
+                  <div class="project-topline">
+                    <span class="tag">frontend</span>
+                    <span class="project-year">2025</span>
+                  </div>
+                  <h3>Landing page de noticias</h3>
+                  <p>
+                    Ejercicio centrado en maquetacion, ritmo visual y composicion con
+                    HTML y CSS. Fue una buena base para pulir criterio visual.
+                  </p>
+                  <a href="https://leo-deploy-pages-883021.gitlab.io/ejercicio-noticias/index.html" target="_blank"
+                    rel="noreferrer">open project</a>
+                </div>
+              </article>
+
+              <article class="project-card">
+                <div class="project-shot">
+                  <img src="assets/project2-small.png" alt="Captura del sistema de ligas escolares" loading="lazy" />
+                </div>
+                <div class="project-body">
+                  <div class="project-topline">
+                    <span class="tag">management</span>
+                    <span class="project-year">2025</span>
+                  </div>
+                  <h3>Sistema de ligas escolares</h3>
+                  <p>
+                    Aplicacion para gestionar equipos, ligas y partidos en un entorno
+                    educativo. Enfoque claro en paneles de administracion y flujo interno.
+                  </p>
+                  <span class="muted-note">private build</span>
+                </div>
+              </article>
+
+              <article class="project-card project-card-featured">
+                <div class="project-shot">
+                  <img src="assets/project3-small.png" alt="Captura del SaaS de gestion de restaurantes"
+                    loading="lazy" />
+                </div>
+                <div class="project-body">
+                  <div class="project-topline">
+                    <span class="tag">saas</span>
+                    <span class="project-year">2026</span>
+                  </div>
+                  <h3>Restaurant management SaaS</h3>
+                  <p>
+                    Plataforma multi-tenant en Laravel orientada a la operacion
+                    diaria de restaurantes. Roles, gestion y producto real.
+                  </p>
+                  <a href="https://leo-dev.es/login" target="_blank" rel="noreferrer">open project</a>
+                </div>
+              </article>
+
+              <article class="project-card">
+                <div class="project-shot project-shot-logo">
+                  <img src="assets/password-manager-logo-small.png"
+                    alt="Logo del proyecto Cinnamon Key Password Manager" loading="lazy" />
+                </div>
+                <div class="project-body">
+                  <div class="project-topline">
+                    <span class="tag">desktop app</span>
+                    <span class="project-year">2026</span>
+                  </div>
+                  <h3>Password Manager</h3>
+                  <p>
+                    Gestor de contrasenas local-first con Electron, Vue, SQLite y cifrado
+                    con el modulo <code>crypto</code> de Node.js.
+                  </p>
+                  <a href="https://github.com/Leocanela279/password-manager" target="_blank"
+                    rel="noreferrer">open repo</a>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="meta-grid">
+            <section class="panel section-panel" id="stack" data-panel>
+              <div class="panel-header">
+                <span class="panel-title">stack.env</span>
+                <span class="panel-meta">tools i use</span>
+              </div>
+
+              <div class="chip-grid">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Node.js</span>
+                <span>Express</span>
+                <span>PHP</span>
+                <span>Laravel</span>
+                <span>MySQL</span>
+                <span>Vue</span>
+                <span>Astro</span>
+                <span>Electron</span>
+                <span>Tailwind</span>
+              </div>
+            </section>
+
+            <section class="panel section-panel" id="contact" data-panel>
+              <div class="panel-header">
+                <span class="panel-title">contact.sh</span>
+                <span class="panel-meta">reach out</span>
+              </div>
+
+              <div class="contact-copy">
+                <p>
+                  Si tienes una idea, una colaboracion o una oportunidad,
+                  escribeme. Suelo responder rapido.
+                </p>
+                <p>
+                  <a href="mailto:leandrocanela279@gmail.com">leandrocanela279@gmail.com</a>
+                </p>
+                <div class="contact-actions">
+                  <button class="copy-button" type="button" data-copy-email>copy email</button>
+                  <a class="secondary-link" href="mailto:leandrocanela279@gmail.com">send mail</a>
+                </div>
+              </div>
+            </section>
+          </section>
+
+          <footer class="footer-note">
+            <p><span data-year></span> / built as an interactive terminal portfolio</p>
+          </footer>
+        </main>
       </div>
     </header>
-
-    <hr />
-
-    <main>
-      <section class="section" id="sobre" aria-labelledby="sobre-titulo">
-        <h2 id="sobre-titulo" class="section-title">sobre</h2>
-        <p>
-          Actualmente sigo aprendiendo a través de proyectos personales y
-          académicos. Me atrae especialmente la parte visual del frontend,
-          pero lo que más disfruto es construi lógica de negocio y paneles de
-          gestión en backend.
-        </p>
-      </section>
-
-      <section class="section" id="proyectos" aria-labelledby="proyectos-titulo">
-        <h2 id="proyectos-titulo" class="section-title">proyectos</h2>
-
-        <article class="timeline-entry">
-          <div class="timeline-time">2025</div>
-          <div class="timeline-rail">
-            <span class="timeline-dot" aria-hidden="true"></span>
-            <a class="timeline-thumb" href="https://leo-deploy-pages-883021.gitlab.io/ejercicio-noticias/index.html"
-              target="_blank" rel="noreferrer" aria-label="Abrir proyecto de landing page de noticias">
-              <img src="assets/project1-small.png" alt="Captura de la landing page estática de noticias" width="420"
-                height="275" loading="lazy" />
-            </a>
-          </div>
-          <div class="timeline-body">
-            <h3>Landing page estática de noticias</h3>
-            <p>
-              Una página centrada en maquetación y composición visual con
-              HTML y CSS. La captura del repo muestra una versión con estética
-              oscura y tarjetas de contenido.
-            </p>
-            <p>
-              <a href="https://leo-deploy-pages-883021.gitlab.io/ejercicio-noticias/index.html" target="_blank"
-                rel="noreferrer">Ver proyecto</a>
-            </p>
-          </div>
-        </article>
-
-        <article class="timeline-entry">
-          <div class="timeline-time">2025</div>
-          <div class="timeline-rail">
-            <span class="timeline-dot" aria-hidden="true"></span>
-            <div class="timeline-thumb">
-              <img src="assets/project2-small.png" alt="Captura del sistema de gestión de ligas escolares" width="600"
-                height="200" loading="lazy" />
-            </div>
-          </div>
-          <div class="timeline-body">
-            <h3>Sistema de gestión de ligas escolares</h3>
-            <p>
-              Aplicación para gestionar equipos, ligas y partidos en un
-              entorno escolar. La miniatura muestra el panel de gestión de
-              equipos con acciones de edición y consulta.
-            </p>
-            <p>Proyecto privado o no publicado actualmente.</p>
-          </div>
-        </article>
-
-        <article class="timeline-entry">
-          <div class="timeline-time">2026</div>
-          <div class="timeline-rail">
-            <span class="timeline-dot" aria-hidden="true"></span>
-            <a class="timeline-thumb" href="https://leo-dev.es/login" target="_blank" rel="noreferrer"
-              aria-label="Abrir SaaS de gestión de restaurantes">
-              <img src="assets/project3-small.png" alt="Captura del SaaS de gestión de restaurantes" width="420"
-                height="243" loading="lazy" />
-            </a>
-          </div>
-          <div class="timeline-body">
-            <h3>SaaS de gestión de restaurantes</h3>
-            <p>
-              Plataforma multi-tenant hecha con Laravel para la gestión de
-              restaurantes. La imagen corresponde a la pantalla de acceso del
-              producto.
-            </p>
-            <p>
-              <a href="https://leo-dev.es/login" target="_blank" rel="noreferrer">Ver proyecto</a>
-            </p>
-          </div>
-        </article>
-
-        <article class="timeline-entry">
-          <div class="timeline-time">2026</div>
-          <div class="timeline-rail">
-            <span class="timeline-dot" aria-hidden="true"></span>
-            <a class="timeline-thumb" href="https://github.com/Leocanela279/password-manager" target="_blank"
-              rel="noreferrer" aria-label="Abrir proyecto Cinnamon Key Password Manager en GitHub">
-              <img src="assets/password-manager-logo-small.png" alt="Imagen del proyecto Cinnamon Key Password Manager"
-                width="520" height="520" loading="lazy" />
-            </a>
-          </div>
-          <div class="timeline-body">
-            <h3>Password Manager</h3>
-            <p>
-              Gestor de contraseñas de escritorio hecho con Electron, Vue y Tailwind CSS. Utiliza
-              <code>bcrypt</code> para el hash de cuentas y el módulo <code>crypto</code> de Node.js
-              para cifrar las credenciales.
-            </p>
-            <p>
-              Todo se guarda en local dentro de SQLite en la app de Electron, sin depender de
-              servidores externos. Es un proyecto local-first con enfoque en seguridad y experiencia
-              de escritorio.
-            </p>
-            <p>
-              <a href="https://github.com/Leocanela279/password-manager" target="_blank" rel="noreferrer">Ver
-                proyecto</a>
-            </p>
-          </div>
-        </article>
-      </section>
-
-      <section class="section" aria-labelledby="stack-titulo">
-        <h2 id="stack-titulo" class="section-title">stack</h2>
-        <p>HTML, CSS, JavaScript, Node.js, Express, PHP, Laravel, MySQL, Vue, Astro, Electron y Tailwind CSS.</p>
-      </section>
-
-      <section class="section" id="contacto" aria-labelledby="contacto-titulo">
-        <h2 id="contacto-titulo" class="section-title">contacto</h2>
-        <p>
-          Puedes escribirme a
-          <a href="mailto:leandrocanela279@gmail.com">leandrocanela279@gmail.com</a>
-          <button class="copy-button" type="button" data-copy-email>
-            copiar
-          </button>
-        </p>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <p><span data-year></span> Leandro Canela.</p>
-    </footer>
   </div>
 
   <script src="script.js"></script>
