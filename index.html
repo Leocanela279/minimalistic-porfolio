@@ -4,189 +4,162 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Portfolio de Leandro Canela con estética hacker moderna: fondo negro, tipografía verde, animaciones y proyectos destacados." />
+  <meta name="description" content="Portfolio de Leandro Canela con proyectos web y herramientas locales." />
   <title>Leandro Canela | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@600;700;800;900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <canvas class="matrix-canvas" data-matrix-canvas aria-hidden="true"></canvas>
-  <div class="scanlines" aria-hidden="true"></div>
-
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="Inicio">
-      <span class="brand-mark">LC</span>
-      <span>Leandro Canela</span>
-    </a>
-    <nav class="site-nav" aria-label="Navegacion principal">
-      <a href="#projects">Proyectos</a>
-      <a href="#stack">Stack</a>
-      <a href="#contact">Contacto</a>
-    </nav>
-  </header>
-
-  <main id="top">
-    <section class="hero">
-      <div class="hero-content">
-        <p class="eyebrow reveal">backend / product / internal tools</p>
-        <h1 data-typewriter data-typewriter-text="Construyo software con pulso de sistema.">
-          Construyo software con pulso de sistema.
-        </h1>
-        <p class="hero-copy reveal">
-          Soy Leandro Canela, desarrollador web orientado a backend, SaaS, apps de escritorio y productos utiles con
-          interfaces rapidas, claras y memorables.
-        </p>
-        <div class="hero-actions reveal">
-          <a class="button" href="#projects">Ver proyectos</a>
-          <a class="button is-ghost" href="mailto:leandrocanela279@gmail.com">Contactar</a>
-        </div>
-      </div>
-
-      <aside class="signal-board reveal" aria-label="Resumen profesional">
-        <div>
-          <span>availability</span>
-          <strong>internships</strong>
-        </div>
-        <div>
-          <span>current build</span>
-          <strong>restaurant SaaS</strong>
-        </div>
-        <div>
-          <span>focus</span>
-          <strong>backend + product</strong>
-        </div>
-      </aside>
-    </section>
-
-    <section class="section intro-grid" aria-label="Perfil">
-      <article class="intro-copy reveal">
-        <p class="section-kicker">whoami</p>
-        <h2 data-typewriter data-typewriter-text="Desarrollador con mentalidad de producto.">
-          Desarrollador con mentalidad de producto.
-        </h2>
-        <p>
-          Me interesan los proyectos retadores, la logica de negocio y el software que resuelve problemas reales.
-          Disfruto construir herramientas internas, paneles de gestion y experiencias web con buen criterio tecnico.
-        </p>
-      </article>
-      <div class="stats-grid reveal" aria-label="Puntos fuertes">
-        <div>
-          <span>01</span>
-          <strong>SaaS</strong>
-          <p>Arquitectura de producto, roles y operaciones.</p>
-        </div>
-        <div>
-          <span>02</span>
-          <strong>Backend</strong>
-          <p>Flujos, datos, seguridad y reglas de negocio.</p>
-        </div>
-        <div>
-          <span>03</span>
-          <strong>UI</strong>
-          <p>Interfaces limpias, rapidas y con personalidad.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="projects">
-      <div class="section-heading reveal">
-        <p class="section-kicker">selected builds</p>
-        <h2 data-typewriter data-typewriter-text="Proyectos con energia propia.">Proyectos con energia propia.</h2>
-      </div>
-
-      <div class="project-grid">
-        <article class="project-card reveal">
-          <a class="project-media" href="https://leo-dev.es/login" target="_blank" rel="noreferrer"
-            aria-label="Abrir Restaurant management SaaS">
-            <img src="assets/project3-small.png" alt="Vista previa de Restaurant management SaaS" loading="lazy" />
-          </a>
-          <div class="project-body">
-            <p class="project-meta">Laravel / MySQL / 2026</p>
-            <h3>Restaurant management SaaS</h3>
-            <p>Plataforma multi-tenant para operaciones de restaurantes, roles y gestion diaria.</p>
-            <a href="https://leo-dev.es/login" target="_blank" rel="noreferrer">Abrir proyecto</a>
-          </div>
-        </article>
-
-        <article class="project-card reveal">
-          <a class="project-media" href="https://github.com/Leocanela279/password-manager" target="_blank"
-            rel="noreferrer" aria-label="Abrir Password Manager">
-            <img src="assets/password-manager-logo-small.png" alt="Logo de Password Manager" loading="lazy" />
-          </a>
-          <div class="project-body">
-            <p class="project-meta">Electron / Vue / SQLite</p>
-            <h3>Password Manager</h3>
-            <p>Gestor local-first con cifrado usando bcrypt y crypto de Node.js.</p>
-            <a href="https://github.com/Leocanela279/password-manager" target="_blank" rel="noreferrer">Abrir repo</a>
-          </div>
-        </article>
-
-        <article class="project-card reveal">
-          <a class="project-media" href="https://leo-deploy-pages-883021.gitlab.io/ejercicio-noticias/index.html"
-            target="_blank" rel="noreferrer" aria-label="Abrir Landing page de noticias">
-            <img src="assets/project1-small.png" alt="Vista previa de landing page de noticias" loading="lazy" />
-          </a>
-          <div class="project-body">
-            <p class="project-meta">HTML / CSS</p>
-            <h3>Landing page de noticias</h3>
-            <p>Ejercicio de maquetacion centrado en ritmo visual, estructura y limpieza.</p>
-            <a href="https://leo-deploy-pages-883021.gitlab.io/ejercicio-noticias/index.html" target="_blank"
-              rel="noreferrer">Abrir demo</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section stack-section" id="stack">
-      <div class="section-heading reveal">
-        <p class="section-kicker">stack.json</p>
-        <h2 data-typewriter data-typewriter-text="Herramientas que uso para construir.">
-          Herramientas que uso para construir.
-        </h2>
-      </div>
-
-      <div class="stack-cloud reveal" aria-label="Tecnologias">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Vue</span>
-        <span>Astro</span>
-        <span>Node.js</span>
-        <span>Express</span>
-        <span>PHP</span>
-        <span>Laravel</span>
-        <span>MySQL</span>
-        <span>SQLite</span>
-        <span>Electron</span>
-        <span>Tailwind CSS</span>
-      </div>
-    </section>
-
-    <section class="section contact-section" id="contact">
-      <div class="contact-copy reveal">
-        <p class="section-kicker">network</p>
-        <h2 data-typewriter data-typewriter-text="Hablemos de lo siguiente.">Hablemos de lo siguiente.</h2>
-        <p>Si tienes una oportunidad, una colaboracion o un proyecto interesante, la via mas directa es el email.</p>
-      </div>
-      <div class="contact-links reveal">
-        <a href="mailto:leandrocanela279@gmail.com">leandrocanela279@gmail.com</a>
+  <div class="page">
+    <header class="topbar">
+      <a class="brand" href="/">Leandro Canela</a>
+      <nav class="topnav" aria-label="Enlaces">
         <a href="https://github.com/Leocanela279" target="_blank" rel="noreferrer">GitHub</a>
         <a href="https://gitlab.com/leandrocanela279" target="_blank" rel="noreferrer">GitLab</a>
-        <a href="https://porfoli-leo.vercel.app/cvLeo.pdf" target="_blank" rel="noreferrer">Resume</a>
-      </div>
-    </section>
-  </main>
+        <a href="https://porfoli-leo.vercel.app/cvLeo.pdf" target="_blank" rel="noreferrer">CV</a>
+        <a href="mailto:leandrocanela279@gmail.com">Email</a>
+      </nav>
+    </header>
 
-  <footer class="site-footer">
-    <span data-year></span>
-    <span>built in dark mode</span>
-  </footer>
+    <main>
+      <section class="intro">
+        <p class="eyebrow">Portfolio</p>
+        <h1>Desarrollador web full stack, con un enfoque mas marcado en backend.</h1>
+        <p class="intro-copy">
+          Me interesa trabajar en proyectos que supongan un reto tecnico y que tengan una utilidad clara.
+        </p>
+        <div class="intro-meta">
+          <span>Backend</span>
+          <span>Laravel</span>
+          <span>Go</span>
+          <span>SaaS</span>
+          <span>CLI</span>
+        </div>
+      </section>
+
+      <section class="projects">
+        <div class="section-head">
+          <p class="eyebrow">Proyectos</p>
+          <h2>Seleccion reciente</h2>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-shot browser-shot">
+              <div class="browser-bar">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <img src="assets/stastarat-screenshot.png" alt="Captura de stastarat.com" />
+            </div>
+
+            <div class="project-content">
+              <div class="project-topline">
+                <span class="project-kind">web platform</span>
+                <span class="project-year">2026</span>
+              </div>
+              <h3>stastarat.com</h3>
+              <p>
+                Web para Club Stas Tarat orientada a presentar la asociacion, sus secciones, calendario y ludoteca
+                con una estructura clara.
+              </p>
+              <div class="project-links">
+                <a href="https://stastarat.com" target="_blank" rel="noreferrer">Ver proyecto</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-shot browser-shot">
+              <div class="browser-bar">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <img src="assets/project3-small.png" alt="Captura del SaaS de restaurantes" />
+            </div>
+
+            <div class="project-content">
+              <div class="project-topline">
+                <span class="project-kind">laravel product</span>
+                <span class="project-year">2026</span>
+              </div>
+              <h3>Restaurant SaaS</h3>
+              <p>
+                Plataforma multi-tenant hecha con Laravel para gestion interna y operaciones diarias en restauracion.
+              </p>
+              <div class="project-links">
+                <a href="https://leo-dev.es/login" target="_blank" rel="noreferrer">Ver proyecto</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-shot terminal-shot">
+              <div class="terminal-bar">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="terminal-body">
+                <div class="terminal-line">
+                  <span class="terminal-user">user@local</span>
+                  <span class="terminal-path">~/vault</span>
+                  <span class="terminal-symbol">$</span>
+                  <span>list</span>
+                </div>
+                <div class="terminal-row"></div>
+                <div class="terminal-row short"></div>
+                <div class="terminal-row"></div>
+                <div class="terminal-row short"></div>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-topline">
+                <span class="project-kind">golang local tool</span>
+                <span class="project-year">2026</span>
+              </div>
+              <h3>CLI Password Manager</h3>
+              <p>
+                Gestor de contrasenas local hecho en Go, pensado para una experiencia directa desde terminal.
+              </p>
+              <div class="project-links">
+                <a href="https://github.com/Leocanela279/cli-password-manager" target="_blank"
+                  rel="noreferrer">Ver repositorio</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="summary">
+        <article class="summary-card">
+          <p class="eyebrow">Perfil</p>
+          <p>Desarrollo web full stack con mayor interes por la parte backend.</p>
+        </article>
+        <article class="summary-card">
+          <p class="eyebrow">Enfoque</p>
+          <p>Logica de negocio, herramientas internas y aplicaciones con estructura solida.</p>
+        </article>
+        <article class="summary-card">
+          <p class="eyebrow">Contacto</p>
+          <p><a class="inline-link" href="mailto:leandrocanela279@gmail.com">leandrocanela279@gmail.com</a></p>
+          <button class="copy-button" type="button" data-copy-email>Copiar email</button>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p><span data-year></span> Leandro Canela</p>
+    </footer>
+  </div>
 
   <script src="script.js"></script>
 </body>
